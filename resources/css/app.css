@@ -5,3 +5,15 @@
 [x-cloak] {
     display: none;
 }
+
+@font-face {
+    font-family: "Caslon";
+    src: url("../public/fonts/LibreCaslonText-Regular.ttf");
+}
+
+/* set default font*/
+@layer base {
+    html {
+      font-family: "Caslon", serif;
+    }
+}
