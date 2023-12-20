@@ -1,0 +1,16 @@
+{
+  "public/fonts/LibreCaslonText-Regular.ttf": {
+    "file": "assets/LibreCaslonText-Regular-912cda29.ttf",
+    "src": "public/fonts/LibreCaslonText-Regular.ttf"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-6a1cb65c.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-ddee773b.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
