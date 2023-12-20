@@ -12,8 +12,8 @@
 }
 
 /* set default font*/
-@layer base {
+/* @layer base {
     html {
       font-family: "Caslon", serif;
     }
-}
+} */

@@ -16,7 +16,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                caslon: ['Caslon','serif'],
+                serif: ['Caslon','serif'],
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
