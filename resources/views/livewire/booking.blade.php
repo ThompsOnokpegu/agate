@@ -21,7 +21,7 @@
                 </div>
                 <div class="text-sm leading-6">
                   <label for="measurement" class="font-semibold text-gray-900">Measurement & Purchase <small>(20 min.)</small></label>
-                  <p class="text-gray-500">When you're ready to place a new order, we'll take your full measurement
+                  <p class="text-gray-500">When you're ready to place an order, we'll take your full measurement
                     and guide you through the design process. We'll collect full payment for the order.
                   </p>
                 </div>
