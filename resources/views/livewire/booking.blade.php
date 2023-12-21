@@ -2,58 +2,49 @@
 <form method="POST">
     <div class="space-y-12">
       <div class="border-b border-gray-900/10 pb-12">
-        <h2 class="text-base font-semibold leading-7 text-gray-900">Select one or more services</h2>  
-        <div class=" space-y-10">
-          <fieldset>
-            <div class="mt-6 space-y-6">
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input value="Initial Consultation" id="consultation" wire:model="consultation" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-sky-500 focus:ring-sky-500">
-                </div>
-                <div class="text-sm leading-6">
-                  <label for="consultation" class="font-semibold text-gray-900">Initial Consultation <small>(15 min.)</small></label>
-                  <p class="text-gray-500">Learn more about the process, options, and pricing. No measurements are taken.</p>
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input value="Measurement & Purchase" id="measurement" wire:model="measurement" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-sky-500 focus:ring-sky-500">
-                </div>
-                <div class="text-sm leading-6">
-                  <label for="measurement" class="font-semibold text-gray-900">Measurement & Purchase <small>(20 min.)</small></label>
-                  <p class="text-gray-500">When you're ready to place an order, we'll take your full measurement
-                    and guide you through the design process. We'll collect full payment for the order.
-                  </p>
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input value="Fitting" id="fitting" wire:model="fitting" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-sky-500 focus:ring-sky-500">
-                </div>
-                <div class="text-sm leading-6">
-                  <label for="fitting" class="font-semibold text-gray-900">Fitting <small>(30 min.)</small></label>
-                  <p class="text-gray-500">We'll make simple adjustments to the design so it conforms correctly to your body shape.</p>
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input value="Alterations & Pickup" id="pickup" wire:model="pickup" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-sky-500 focus:ring-sky-500">
-                </div>
-                <div class="text-sm leading-6">
-                  <label for="pickup" class="font-semibold text-gray-900">Pick-up Appointment <small>(10 min.)</small></label>
-                  <p class="text-gray-500">When your garment is ready, you can choose to pick it up in a 10-minute appointment.</p>
-                </div>
-              </div>
-              @if(session()->has('services'))
-                <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-                  {{ session('services') }}
-                </div>
-              @endif
-            </div>
-          </fieldset>
-        </div>
+        
+        <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">Choose a Service:</h3>
+        <ul class="grid w-full gap-6">
+            <li>
+                <input type="checkbox" id="consultation" value="" class="hidden peer" required="">
+                <label for="consultation" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-sky-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
+                    <div class="block">
+                        <div class="w-full text-lg font-semibold">Initial Consultation <small>(15 min.)</small></div>
+                        <div class="w-full text-sm">Learn more about the process, options, and pricing. No measurements are taken.</div>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <input id="measurement" wire:model="measurement" value="" type="checkbox" class="hidden peer">
+                <label for="measurement" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-sky-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="block">
+                        <div class="w-full text-lg font-semibold">Measurement & Purchase <small>(20 min.)</div>
+                        <div class="w-full text-sm">When you're ready to place an order, we'll take your full measurement
+                          and guide you through the design process. We'll collect full payment for the order.</div>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <input id="fitting" wire:model="fitting" type="checkbox" class="hidden peer">
+                <label for="fitting" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-sky-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="block">
+                        <div class="w-full text-lg font-semibold">Fitting <small>(30 min.)</div>
+                        <div class="w-full text-sm">We'll make simple adjustments to the design so it conforms correctly to your body shape.</div>
+                    </div>
+                </label>
+            </li>
+            <li class="mt-6">
+                <input id="pickup" wire:model="pickup" type="checkbox" class="hidden peer">
+                <label for="pickup" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-sky-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="block">
+                        <div class="w-full text-lg font-semibold">Pick-up Appointment <small>(10 min.)</div>
+                        <div class="w-full text-sm">When your garment is ready, you can choose to pick it up in a 10-minute appointment.</div>
+                    </div>
+                </label>
+            </li>
+        </ul>
       </div>
-      <div class="text-base">
+      <div class="text-base mt-5">
           <h2 class="text-base font-semibold leading-7 text-gray-900">Select your prefered date & time.</h2>
           <p class="mt-1 text-sm leading-6 text-gray-600">Choose a date from tomorrow.</p>
           
@@ -64,12 +55,13 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                 </div>
                 <input type="date" wire:model="appointment_date" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full ps-14 md:ps-12 p-2.9 md:p-2.5" placeholder="name@flowbite.com">
-                @error('appointment_date')
-                    <div>
-                        <span class="font-normal text-red-500">{{ $message }}</span>
-                    </div>
-                @enderror
+               
               </div>
+              @error('appointment_date')
+              <div>
+                  <span class="text-sm font-normal text-red-500">{{ $message }}</span>
+              </div>
+              @enderror
             </div>
             <div class="col-span-2">
               <div class="relative mb-1">
@@ -77,16 +69,17 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 </div>
                 <input type="time" wire:model="appointment_time" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full ps-14 md:ps-12 p-2.9 md:p-2.5" placeholder="name@flowbite.com">
-                @error('appointment_time')
-                    <div>
-                        <span class="font-normal text-red-500">{{ $message }}</span>
-                    </div>
-                @enderror
+               
               </div>
+              @error('appointment_time')
+              <div>
+                  <span class="text-sm font-normal text-red-500">{{ $message }}</span>
+              </div>
+              @enderror
             </div>
           </div>
       </div> 
-      <div class="border-gray-900/10 pb-12">
+      <div class="border-gray-900/10 pb-12 mt-5">
         <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
         <p class="mt-1 text-sm leading-6 text-gray-600">Please enter your personal information below.</p>
   
@@ -98,7 +91,7 @@
                   <input type="text" placeholder="Phone Number" wire:model="phone" id="phone" aria-describedby="helper-text-explanation" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
                   @error('phone')
                     <div>
-                        <span class="font-normal text-red-500">{{ $message }}</span>
+                        <span class=" text-sm font-normal text-red-500">{{ $message }}</span>
                     </div>
                   @enderror
               </div>
@@ -108,7 +101,7 @@
               <input type="text" placeholder="First Name" wire:model="first_name" id="first-name" autocomplete="given-name" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
               @error('first_name')
                 <div>
-                    <span class="font-normal text-red-500">{{ $message }}</span>
+                    <span class="text-sm font-normal text-red-500">{{ $message }}</span>
                 </div>
               @enderror
             </div>
@@ -118,7 +111,7 @@
               <input type="text" placeholder="Last Name" wire:model="last_name" id="last-name" autocomplete="family-name" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
               @error('last_name')
                 <div>
-                    <span class="font-normal text-red-500">{{ $message }}</span>
+                    <span class="text-sm font-normal text-red-500">{{ $message }}</span>
                 </div>
               @enderror
             </div>
@@ -131,7 +124,7 @@
               <input type="text" placeholder="Email Address" wire:model="email" id="email" autocomplete="street-address" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
               @error('email')
                 <div>
-                    <span class="font-normal text-red-500">{{ $message }}</span>
+                    <span class="text-sm font-normal text-red-500">{{ $message }}</span>
                 </div>
               @enderror
             </div>
@@ -147,7 +140,7 @@
     </div>
     
     @if(session()->has('booked'))
-      <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+      <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 role="alert">
         {{ session('booked') }}
       </div>
     @endif

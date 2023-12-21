@@ -71,6 +71,7 @@ class Booking extends Component
         $booked = $booking->save();
 
         if($booked){
+            $this->reset();
             //todo: send email
             return session()->flash('booked','Your appointment was booked successfully!');
         }
