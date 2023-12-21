@@ -3,11 +3,11 @@
     <div class="space-y-12">
       <div class="border-b border-gray-900/10 pb-12">
         
-        <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">Choose a Service:</h3>
+        <h2 class="text-base font-semibold leading-7 text-gray-900">Choose a Service:</h2>
         <ul class="grid w-full gap-6">
             <li>
                 <input type="checkbox" id="consultation" value="" class="hidden peer" required="">
-                <label for="consultation" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-sky-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
+                <label for="consultation" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">                           
                     <div class="block">
                         <div class="w-full text-lg font-semibold">Initial Consultation <small>(15 min.)</small></div>
                         <div class="w-full text-sm">Learn more about the process, options, and pricing. No measurements are taken.</div>
@@ -16,7 +16,7 @@
             </li>
             <li>
                 <input id="measurement" wire:model="measurement" value="" type="checkbox" class="hidden peer">
-                <label for="measurement" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-sky-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <label for="measurement" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">Measurement & Purchase <small>(20 min.)</div>
                         <div class="w-full text-sm">When you're ready to place an order, we'll take your full measurement
@@ -26,7 +26,7 @@
             </li>
             <li>
                 <input id="fitting" wire:model="fitting" type="checkbox" class="hidden peer">
-                <label for="fitting" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-sky-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <label for="fitting" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">Fitting <small>(30 min.)</div>
                         <div class="w-full text-sm">We'll make simple adjustments to the design so it conforms correctly to your body shape.</div>
@@ -35,7 +35,7 @@
             </li>
             <li class="mt-6">
                 <input id="pickup" wire:model="pickup" type="checkbox" class="hidden peer">
-                <label for="pickup" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-sky-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <label for="pickup" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">Pick-up Appointment <small>(10 min.)</div>
                         <div class="w-full text-sm">When your garment is ready, you can choose to pick it up in a 10-minute appointment.</div>
@@ -45,7 +45,7 @@
         </ul>
       </div>
       <div class="text-base mt-5">
-          <h2 class="text-base font-semibold leading-7 text-gray-900">Select your prefered date & time.</h2>
+          <h2 class="text-base font-semibold leading-7 text-gray-900">Select your prefered date & time:</h2>
           <p class="mt-1 text-sm leading-6 text-gray-600">Choose a date from tomorrow.</p>
           
           <div class="mt-2 grid grid-cols-2">
@@ -80,7 +80,7 @@
           </div>
       </div> 
       <div class="border-gray-900/10 pb-12 mt-5">
-        <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
+        <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information:</h2>
         <p class="mt-1 text-sm leading-6 text-gray-600">Please enter your personal information below.</p>
   
         <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6">
