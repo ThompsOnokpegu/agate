@@ -57,28 +57,30 @@
           <h2 class="text-base font-semibold leading-7 text-gray-900">Select your prefered date & time.</h2>
           <p class="mt-1 text-sm leading-6 text-gray-600">Choose a date from tomorrow.</p>
           
-          <div class="mt-2 grid grid-cols-1 gap-x-6 sm:grid-cols-6">
-            
-          
-
+          <div class="mt-2 grid grid-cols-2">
             <div class="col-span-2">
-              <div class="mt-1">
-                <input type="date" wire:model="appointment_date" id="appointment_date" autocomplete="appointment-date" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
+              <div class="relative mb-1">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <input type="date" wire:model="appointment_date" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full ps-14 md:ps-12 p-2.9 md:p-2.5" placeholder="name@flowbite.com">
                 @error('appointment_date')
-                  <div>
-                      <span class="font-normal text-red-500">{{ $message }}</span>
-                  </div>
+                    <div>
+                        <span class="font-normal text-red-500">{{ $message }}</span>
+                    </div>
                 @enderror
               </div>
             </div>
             <div class="col-span-2">
-              <h2 class="text-base font-semibold leading-7 text-gray-900"></h2>
-              <div class="mt-1">
-                <input type="time" wire:model="appointment_time" id="appointment_date" autocomplete="appointment-date" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
+              <div class="relative mb-1">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <input type="time" wire:model="appointment_time" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full ps-14 md:ps-12 p-2.9 md:p-2.5" placeholder="name@flowbite.com">
                 @error('appointment_time')
-                  <div>
-                      <span class="font-normal text-red-500">{{ $message }}</span>
-                  </div>
+                    <div>
+                        <span class="font-normal text-red-500">{{ $message }}</span>
+                    </div>
                 @enderror
               </div>
             </div>
@@ -139,7 +141,7 @@
               <textarea id="note" wire:model="note" rows="3" placeholder="Appointment Note (optional)" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5"></textarea>
               
             </div>
-          </div>
+          </div>          
         </div>
       </div> 
     </div>
