@@ -63,7 +63,7 @@
 
             <div class="col-span-2">
               <div class="mt-1">
-                <input type="date" wire:model="appointment_date" id="appointment_date" autocomplete="appointment-date" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500">
+                <input type="date" wire:model="appointment_date" id="appointment_date" autocomplete="appointment-date" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
                 @error('appointment_date')
                   <div>
                       <span class="font-normal text-red-500">{{ $message }}</span>
@@ -74,7 +74,7 @@
             <div class="col-span-2">
               <h2 class="text-base font-semibold leading-7 text-gray-900"></h2>
               <div class="mt-1">
-                <input type="time" wire:model="appointment_time" id="appointment_date" autocomplete="appointment-date" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500">
+                <input type="time" wire:model="appointment_time" id="appointment_date" autocomplete="appointment-date" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
                 @error('appointment_time')
                   <div>
                       <span class="font-normal text-red-500">{{ $message }}</span>
@@ -86,14 +86,14 @@
       </div> 
       <div class="border-gray-900/10 pb-12">
         <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
-        <p class="mt-1 text-sm leading-6 text-gray-600">Enter your details below.</p>
+        <p class="mt-1 text-sm leading-6 text-gray-600">Please enter your personal information below.</p>
   
         <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6">
           
           <div class="col-span-2">
               <div class="relative mt-1">
                   
-                  <input type="text" placeholder="Phone Number" wire:model="phone" id="phone" aria-describedby="helper-text-explanation" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500">
+                  <input type="text" placeholder="Phone Number" wire:model="phone" id="phone" aria-describedby="helper-text-explanation" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
                   @error('phone')
                     <div>
                         <span class="font-normal text-red-500">{{ $message }}</span>
@@ -103,7 +103,7 @@
           </div>
           <div class="col-span-2">
             <div class="mt-1">
-              <input type="text" placeholder="First Name" wire:model="first_name" id="first-name" autocomplete="given-name" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500">
+              <input type="text" placeholder="First Name" wire:model="first_name" id="first-name" autocomplete="given-name" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
               @error('first_name')
                 <div>
                     <span class="font-normal text-red-500">{{ $message }}</span>
@@ -113,7 +113,7 @@
           </div>
           <div class="col-span-2">
             <div class="mt-1">
-              <input type="text" placeholder="Last Name" wire:model="last_name" id="last-name" autocomplete="family-name" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500">
+              <input type="text" placeholder="Last Name" wire:model="last_name" id="last-name" autocomplete="family-name" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
               @error('last_name')
                 <div>
                     <span class="font-normal text-red-500">{{ $message }}</span>
@@ -126,7 +126,7 @@
           
           <div class="col-span-full">
             <div class="mt-1">
-              <input type="text" placeholder="Email Address" wire:model="email" id="email" autocomplete="street-address" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500">
+              <input type="text" placeholder="Email Address" wire:model="email" id="email" autocomplete="street-address" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5">
               @error('email')
                 <div>
                     <span class="font-normal text-red-500">{{ $message }}</span>
@@ -136,7 +136,7 @@
           </div>
           <div class="col-span-full">
             <div class="mt-1">
-              <textarea id="note" wire:model="note" rows="3" placeholder="Appointment Note (optional)" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500"></textarea>
+              <textarea id="note" wire:model="note" rows="3" placeholder="Appointment Note (optional)" class="text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3.5 md:p-2.5"></textarea>
               
             </div>
           </div>
