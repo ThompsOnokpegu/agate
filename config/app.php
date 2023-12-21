@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Agate Ready to Wear - Makurdi'),
+    'name' => env('APP_NAME', 'Agate'),
 
     /*
     |--------------------------------------------------------------------------
