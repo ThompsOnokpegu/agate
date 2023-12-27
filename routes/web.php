@@ -15,9 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('booking');
-});
+})->name('home');
+
 Route::get('/booking',function(){
     return view('booking');
+});
+
+Route::get('/mailable', function () {
+    $appointment = App\Models\Appointment::find(43);
+    return new App\Mail\AppointmentBooked($appointment);
 });
 
 
