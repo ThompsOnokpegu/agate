@@ -7,7 +7,7 @@
         <ul class="grid w-full gap-6">
             <li>
                 <input type="checkbox" id="initial_consultation" wire:model="initial_consultation" value="" class="hidden peer" required="">
-                <label for="initial_consultation" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">                           
+                <label for="initial_consultation" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">                           
                     <div class="block">
                         <div class="w-full text-lg font-semibold">Initial Consultation <small>(15 min.)</small></div>
                         <div class="w-full text-sm">Learn more about the process, options, and pricing. No measurements are taken.</div>
@@ -16,7 +16,7 @@
             </li>
             <li>
                 <input id="measurement" wire:model="measurement" value="" type="checkbox" class="hidden peer">
-                <label for="measurement" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
+                <label for="measurement" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">Measurement & Purchase <small>(20 min.)</div>
                         <div class="w-full text-sm">When you're ready to place an order, we'll take your full measurement
@@ -26,7 +26,7 @@
             </li>
             <li>
                 <input id="alteration_and_fitting" wire:model="alteration_and_fitting" type="checkbox" class="hidden peer">
-                <label for="alteration_and_fitting" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
+                <label for="alteration_and_fitting" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">Alteration & Fitting <small>(30 min.)</div>
                         <div class="w-full text-sm">We'll make simple adjustments to the design so it conforms correctly to your body shape.</div>
@@ -35,7 +35,7 @@
             </li>
             <li class="mt-6">
                 <input id="pickup_appointment" wire:model="pickup_appointment" type="checkbox" class="hidden peer">
-                <label for="pickup_appointment" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
+                <label for="pickup_appointment" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">Pick-up Appointment <small>(10 min.)</div>
                         <div class="w-full text-sm">When your garment is ready, you can choose to pick it up in a 10-minute appointment.</div>
@@ -44,7 +44,7 @@
             </li>
             <li class="mt-6">
                 <input id="external" wire:model.live="external" type="checkbox" class="hidden peer">
-                <label for="external" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-200 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
+                <label for="external" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white rounded-lg border-2 border-gray-300 cursor-pointer peer-checked:border-sky-500 peer-checked:bg-sky-50 hover:text-gray-600 peer-checked:text-gray-600 hover:bg-gray-50">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">B2B Services <small>(20 - 60 min.)</div>
                         <div class="w-full text-sm">State of the art Ironing & Packaging, Buttonhole Making and Button Tacking services to tailoring businesses.</div>
@@ -53,15 +53,15 @@
                 @if($external)
                 <div class="mx-2 flex items-center ps-4 border border-gray-200">
                     <input id="bordered-checkbox-1" type="checkbox" value="" wire:model="button_hole_making" class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 focus:ring-2">
-                    <label for="bordered-checkbox-1" class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Buttonhole Making</label>
+                    <label for="bordered-checkbox-1" class="w-full py-4 ms-2 text-sm font-medium">Buttonhole Making</label>
                 </div>
                 <div class="mx-2 flex items-center ps-4 border border-gray-200">
                     <input id="bordered-checkbox-2" type="checkbox" value="" wire:model="button_tacking" class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 focus:ring-2">
-                    <label for="bordered-checkbox-2" class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Button Tacking</label>
+                    <label for="bordered-checkbox-2" class="w-full py-4 ms-2 text-sm font-medium">Button Tacking</label>
                 </div>
                 <div class="mx-2 flex items-center ps-4 border border-gray-200">
                     <input id="bordered-checkbox-3" type="checkbox" value="" wire:model="ironing_and_packaging" class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 focus:ring-2">
-                    <label for="bordered-checkbox-3" class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ironing & Packaging</label>
+                    <label for="bordered-checkbox-3" class="w-full py-4 ms-2 text-sm font-medium">Ironing & Packaging</label>
                 </div>
                   @if(session()->has('b2b'))
                     <div class="mx-2 p-4 mb-4 text-sm text-red-800 bg-red-50 role="alert">
@@ -190,7 +190,7 @@
     </div>
 
     <div class="mt-4 mb-6 flex items-center justify-end gap-x-6" wire:loading.remove>
-      <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+      {{-- <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button> --}}
       <button wire:click.prevent="bookAppointment" type="submit" class="rounded-none bg-sky-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">Book Appointment</button>
     </div>
     
